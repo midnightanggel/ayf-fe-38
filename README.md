@@ -100,7 +100,3 @@ Visual Studio Code
 ## Demo App
 
 - [Development Build](https://ayo-fe-38.vercel.app/)
-
-```
-
-```
