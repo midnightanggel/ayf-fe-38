@@ -12,7 +12,7 @@ Dibuat dengan :
 
 # Contribution Guide
 
-# Please DO NOT Direct PUSH to main or development Branch
+# Please DO NOT Direct PUSH to main or development branch
 
 ## Braching Guide
 
