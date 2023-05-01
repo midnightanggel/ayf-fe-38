@@ -46,11 +46,11 @@ Dibuat dengan :
 
    > ` git stash`
 
-2. Setelah itu kamu perlu pull perubahan dari branch main
+2. Setelah itu kamu perlu pull perubahan dari branch development
 
-   > `git pull origin main`
+   > `git pull origin development`
 
-3. Setelah kamu berhasil melakukan pembaruan dari branch main selanjutnya kamu perlu mengembalikan pekerjaan mu sebelum nya yang ter stash
+3. Setelah kamu berhasil melakukan pembaruan dari branch development selanjutnya kamu perlu mengembalikan pekerjaan mu sebelum nya yang ter stash
 
    > `git stash pop`
 
@@ -72,9 +72,9 @@ Dibuat dengan :
 
    > `git checkout <branch kamu>`
 
-4. Selanjutnya kita perlu merge perubahan terbaru dari main
+4. Selanjutnya kita perlu merge perubahan terbaru dari development
 
-   > `git merge main`
+   > `git merge development`
 
 ## Recomendation Code Editor
 
@@ -100,3 +100,7 @@ Visual Studio Code
 ## Demo App
 
 - [Development Build](https://ayo-fe-38.vercel.app/)
+
+```
+
+```
