@@ -70,7 +70,7 @@ Dibuat dengan :
 
 3. Kemudian Pindah lagi ke branch dirimu
 
-   > `git checkout <branch mu>`
+   > `git checkout <branch kamu>`
 
 4. Selanjutnya kita perlu merge perubahan terbaru dari main
 
