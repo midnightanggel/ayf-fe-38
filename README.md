@@ -5,6 +5,7 @@ Dibuat dengan :
 - HTML5
 - Javascript ES6
 - Tailwind CSS
+- Bootstrap
 
 # How To Use Git Properly ( Please Read This )
 
@@ -93,10 +94,18 @@ Visual Studio Code
 
   > `git clone git@github.com:midnightanggel/ayo-fe-38.git`
 
+- Pindah ke branch development
+
+  > `git checkout development`
+
+- Lalu mulai pekerjaanmu sebagai mestinya
+
 ## Run Development
 
 - Project bisa dijalankan dengan menggunakan Live Server
 
 ## Demo App
+
+- [Production Build](https://ayo-fe-38.netlify.app/)
 
 - [Development Build](https://ayo-fe-38.vercel.app/)
