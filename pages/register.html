@@ -31,7 +31,7 @@
               >Please fill in your data correctly</span
             >
           </section>
-          <form class="w-auto h-1/2 md:mx-12 mx-0" @submit.prevent="register()">
+          <form class="w-auto h-1/2 md:mx-12 mx-0">
             <section
               class="flex flex-col items-center justify-center w-full gap-y-3"
             >
@@ -44,7 +44,7 @@
                     </label>
                     <input
                       type="text"
-                      name="fullname"
+                      id="fullName"
                       class="px-3 py-3 bg-gray-100 border shadow-md border-blue-200 placeholder-slate-500 focus:outline-none focus:ring-yellow-200 dark:focus:ring-gray-400 w-auto rounded-md sm:text-sm focus:ring-1"
                       placeholder="Enter your full name"
                     />
@@ -56,7 +56,7 @@
                     </label>
                     <input
                       type="number"
-                      name="age"
+                      id="age"
                       class="px-3 py-3 bg-gray-100 border shadow-md border-blue-200 placeholder-slate-500 focus:outline-none focus:ring-yellow-200 dark:focus:ring-gray-400 w-auto rounded-md sm:text-sm focus:ring-1"
                       placeholder="Enter your age"
                     />
@@ -67,9 +67,10 @@
                       <span class="text-red-700 font-bold">*</span>
                     </label>
                     <select
+                      id="country"
                       class="px-3 py-3 bg-gray-100 border shadow-md border-blue-200 placeholder-slate-500 focus:outline-none focus:ring-yellow-200 dark:focus:ring-gray-400 w-auto rounded-md sm:text-sm focus:ring-1 placeholder-gray-400"
                     >
-                      <option selected>Choose a country</option>
+                      <option disabled selected>Choose a country</option>
                       <option value="Indonesia">Indonesia</option>
                       <option value="Malaysia">Malaysia</option>
                       <option value="Singapura">Singapura</option>
@@ -91,7 +92,7 @@
                     </label>
                     <input
                       type="email"
-                      name="email"
+                      id="email"
                       class="px-3 py-3 bg-gray-100 border shadow-md border-blue-200 placeholder-slate-500 focus:outline-none focus:ring-yellow-200 dark:focus:ring-gray-400 w-auto rounded-md sm:text-sm focus:ring-1"
                       placeholder="youremail@gmail.com"
                     />
@@ -102,7 +103,7 @@
                     </label>
                     <input
                       type="password"
-                      name="password"
+                      id="password"
                       class="px-3 py-3 bg-gray-100 border shadow-md border-blue-200 placeholder-slate-500 focus:outline-none focus:border-yellow-300 dark:focus:ring-gray-400 focus:ring-yellow-200 w-auto rounded-md sm:text-sm focus:ring-1"
                       placeholder="Enter your password"
                     />
@@ -114,7 +115,7 @@
                     </label>
                     <input
                       type="password"
-                      name="password"
+                      id="confirmPassword"
                       class="px-3 py-3 bg-gray-100 border shadow-md border-blue-200 placeholder-slate-500 focus:outline-none focus:border-yellow-300 dark:focus:ring-gray-400 focus:ring-yellow-200 w-auto rounded-md sm:text-sm focus:ring-1"
                       placeholder="Enter your password again"
                     />
@@ -125,10 +126,16 @@
                 <span class="order-2 text-gray-500 font-medium"
                   >Agree to the terms & conditions that apply
                 </span>
-                <input type="checkbox" name="" id="" />
+                <input type="checkbox" name="" id="term" />
               </section>
+              <span
+                id="warning"
+                class="md:text-md text-sm text-left font-medium text-red-500 hidden"
+                >Please complete the data correctly</span
+              >
 
               <button
+                type="submit"
                 class="w-full bg-blue-400 h-auto md:px-6 md:py-3 p-3 rounded-xl font-bold text-white shadow-lg hover:bg-blue-500 text-xs md:text-md"
               >
                 Register
@@ -161,6 +168,6 @@
         </section>
       </section>
     </section>
-    <script src="./assets/index.js" type="module"></script>
+    <script src="../modules/Register/index.js" type="module"></script>
   </body>
 </html>
