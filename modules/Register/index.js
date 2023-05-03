@@ -35,6 +35,7 @@ const handleRegister = async (e) => {
           password: password.value,
         }),
       });
+      form.reset();
     } catch (error) {
       console.log(error);
     }
