@@ -1,0 +1,36 @@
+body {
+  font-family: "Poppins", "sans-serif";
+  background: #41cf75;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.nav-link {
+  font-size: 18px;
+}
+.nav-link.active {
+  font-weight: 700;
+}
+
+.button-primary {
+  width: 133px;
+  height: 40px;
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.button-secondary {
+  width: 133px;
+  height: 40px;
+  background-color: #fff;
+  color: #048853;
+  border: none;
+  font-size: 16px;
+  font-weight: 700;
+}
