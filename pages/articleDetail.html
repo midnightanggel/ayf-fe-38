@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AYO FE 38</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css"
+    />
+    <style>
+      body {
+        font-family: "Poppins", "sans-serif";
+      }
+    </style>
+  </head>
+  <body>
+    <header
+      class="text-gray-800 flex w-full h-[12vh] justify-between md:px-[150px] px-5 items-center bg-gradient-to-bl from-green-700 via-green-400 to-green-500"
+    >
+      <figure class="items-center justify-center w-[70px]">
+        <img src="../assets/img/asyf-logo.png" alt="" />
+      </figure>
+      <nav
+        class="hidden md:flex flex-row justify-around items-center font-semibold"
+      >
+        <ul class="flex flex-row gap-5">
+          <li class="cursor-pointer text-base text-gray-900">Home</li>
+          <li class="cursor-pointer text-base text-gray-900">About</li>
+          <li class="cursor-pointer text-base text-gray-900">Articles</li>
+        </ul>
+      </nav>
+      <section class="hidden md:flex flex-row gap-5">
+        <button
+          class="text-gray-800 font-semibold flex items-center justify-center w-auto h-auto p-2"
+        >
+          Login
+        </button>
+        <button
+          class="font-semibold flex items-center justify-center border-2 bg-white rounded-lg p-2 text-gray-900"
+        >
+          Register
+        </button>
+      </section>
+      <section class="md:hidden flex">
+        <section id="mobile-button" class="w-[40px]">
+          <img
+            class="cursor-pointer"
+            src="../assets/img/burger-icon.png"
+            alt=""
+          />
+        </section>
+        <section
+          id="mobile-menu"
+          class="hidden flex flex-col absolute top-14 right-5 bg-gray-100 w-auto py-2 px-3 rounded-md gap-y-3"
+        >
+          <h1>Home</h1>
+          <h1>About</h1>
+          <h1>Articles</h1>
+          <h1>Login</h1>
+          <h1>Register</h1>
+        </section>
+      </section>
+    </header>
+    <main
+      class="w-full min-h-[88vh] py-[50px] justify-center md:px-[150px] px-5 flex flex-row gap-4"
+    >
+      <section class="w-2/3 flex flex-col gap-4">
+        <h1 class="font-bold text-4xl">
+          Ganjar belajar memajukan pendidikan keagamaan di ponpes Girikusumo
+        </h1>
+        <p class="text-sm">Thursday, 4 Mei 2023 19:47 WIB</p>
+        <figure class="">
+          <img
+            class="w-full object-cover aspect-video"
+            src="https://img.antaranews.com/cache/800x533/2023/05/04/IMG-20230504-WA0047.jpg.webp"
+            alt=""
+          />
+        </figure>
+        <section
+          id="articleDesc"
+          class="w-full flex flex-col gap-5 text-justify"
+        ></section>
+        <section class="flex flex-col gap-2">
+          <section class="flex flex-row gap-2">
+            <h1 class="font-bold text-xl">Comments (3)</h1>
+            <section class="items-center flex gap-5">
+              <figure class="w-[20px] flex gap-1 items-center">
+                <img
+                  class="pt-1 rotate-180"
+                  src="../assets/img/like-icon.png"
+                  alt=""
+                />
+                <figcaption>0</figcaption>
+              </figure>
+              <figure class="w-[20px] flex gap-1 items-center">
+                <img class="pt-1" src="../assets/img/like-icon.png" alt="" />
+                <figcaption>0</figcaption>
+              </figure>
+            </section>
+          </section>
+          <section
+            class="w-full border-2 border-gray-200 rounded flex flex-col p-2"
+          >
+            <textarea
+              rows="2"
+              class="p-2.5 w-full text-sm text-gray-900 outline-none"
+              placeholder="Write your Comments here..."
+            ></textarea>
+
+            <button
+              type="submit"
+              class="self-end w-[100px] bg-blue-400 h-auto md:px-6 md:py-3 p-3 rounded-xl font-bold text-white shadow-lg hover:bg-blue-500 text-xs md:text-md"
+            >
+              Send
+            </button>
+          </section>
+          <section id="comments" class="flex flex-col gap-2">
+            <section id="comment" class="flex flex-row w-full gap-2">
+              <figure class="w-[40px]">
+                <img
+                  src="https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_640/v1634025439/01ge0t7a2ephra8b3yc52egza4.jpg"
+                  alt=""
+                  class="rounded-full object-cover aspect-square"
+                />
+              </figure>
+              <section class="w-full flex flex-col gap-[2px]">
+                <h1 class="text-sm font-medium">Fahmi Sugiarto</h1>
+                <h1 class="text-[10px] text-gray-900 font-light">
+                  2 jam yang lalu
+                </h1>
+                <h1 class="text-sm font-normal">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                </h1>
+              </section>
+            </section>
+            <section id="comment" class="flex flex-row w-full gap-2">
+              <figure class="w-[40px]">
+                <img
+                  src="https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_640/v1634025439/01ge0t7a2ephra8b3yc52egza4.jpg"
+                  alt=""
+                  class="rounded-full object-cover aspect-square"
+                />
+              </figure>
+              <section class="w-full flex flex-col gap-[2px]">
+                <h1 class="text-sm font-medium">Fahmi Sugiarto</h1>
+                <h1 class="text-[10px] text-gray-900 font-light">
+                  2 jam yang lalu
+                </h1>
+                <h1 class="text-sm font-normal">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                </h1>
+              </section>
+            </section>
+            <section id="comment" class="flex flex-row w-full gap-2">
+              <figure class="w-[40px]">
+                <img
+                  src="https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_640/v1634025439/01ge0t7a2ephra8b3yc52egza4.jpg"
+                  alt=""
+                  class="rounded-full object-cover aspect-square"
+                />
+              </figure>
+              <section class="w-full flex flex-col gap-[2px]">
+                <h1 class="text-sm font-medium">Fahmi Sugiarto</h1>
+                <h1 class="text-[10px] text-gray-900 font-light">
+                  2 jam yang lalu
+                </h1>
+                <h1 class="text-sm font-normal">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                </h1>
+              </section>
+            </section>
+          </section>
+        </section>
+      </section>
+      <section class="w-1/3 flex flex-col gap-4">
+        <h1 class="font-bold text-xl">Most popular</h1>
+        <section id="mostPopular" class="flex flex-col gap-4">
+          <section
+            id="popularContent"
+            class="flex flex-row w-full gap-2 justify-center items-center"
+          >
+            <figure class="w-1/3">
+              <img
+                class="w-full object-cover aspect-video rounded"
+                src="https://img.antaranews.com/cache/800x533/2023/05/02/Model-Y-Main-Hero-Desktop-Global.jpg.webp"
+                alt=""
+              />
+            </figure>
+            <section class="w-2/3">
+              <h1
+                class="text-sm text-justify line-clamp-3 overflow-ellipsis font-medium"
+              >
+                Tesla klaim Model Y AWD adalah SUV paling efisien yang pernah
+                ada
+              </h1>
+            </section>
+          </section>
+          <section
+            id="popularContent"
+            class="flex flex-row w-full gap-2 justify-center items-center"
+          >
+            <figure class="w-1/3">
+              <img
+                class="w-full object-cover aspect-video rounded"
+                src="https://img.antaranews.com/cache/800x533/2023/05/02/Model-Y-Main-Hero-Desktop-Global.jpg.webp"
+                alt=""
+              />
+            </figure>
+            <section class="w-2/3">
+              <h1
+                class="text-sm text-justify line-clamp-3 overflow-ellipsis font-medium"
+              >
+                Tesla klaim Model Y AWD adalah SUV paling efisien yang pernah
+                ada
+              </h1>
+            </section>
+          </section>
+          <section
+            id="popularContent"
+            class="flex flex-row w-full gap-2 justify-center items-center"
+          >
+            <figure class="w-1/3">
+              <img
+                class="w-full object-cover aspect-video rounded"
+                src="https://img.antaranews.com/cache/800x533/2023/05/02/Model-Y-Main-Hero-Desktop-Global.jpg.webp"
+                alt=""
+              />
+            </figure>
+            <section class="w-2/3">
+              <h1
+                class="text-sm text-justify line-clamp-3 overflow-ellipsis font-medium"
+              >
+                Tesla klaim Model Y AWD adalah SUV paling efisien yang pernah
+                ada
+              </h1>
+            </section>
+          </section>
+        </section>
+      </section>
+    </main>
+    <footer
+      class="py-10 bg-white sm:pt-16 lg:pt-24 bg-gradient-to-bl from-green-700 via-green-400 to-green-500 text-white"
+    >
+      <section class="md:px-[150px] px-5">
+        <section
+          class="flex md:flex-row flex-col gap-10 justify-between text-gray-800"
+        >
+          <section class="md:w-1/2 w-full">
+            <img class="w-auto h-9" src="../assets/img/asyf-logo.png" alt="" />
+            <h1 class="font-bold">Asean Youth Forum</h1>
+            <p class="text-base leading-relaxed mt-7 text-justify">
+              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+              amet sint. Velit officia consequat duis enim velit mollit.
+            </p>
+          </section>
+
+          <section class="md:w-1/2 w-full md:place-items-end flex flex-col">
+            <p class="text-base font-semibold text-gray-900">Company</p>
+
+            <ul class="mt-6 space-y-5">
+              <li>
+                <a
+                  href="#"
+                  title=""
+                  class="flex text-sm text-gray-800 transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
+                >
+                  Home
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  title=""
+                  class="flex text-sm text-gray-800 transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
+                >
+                  About
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  title=""
+                  class="flex text-sm text-gray-800 transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
+                >
+                  Article
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  title=""
+                  class="flex text-sm text-gray-800 transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
+                >
+                  Login
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  title=""
+                  class="flex text-sm text-gray-800 transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
+                >
+                  Register
+                </a>
+              </li>
+            </ul>
+          </section>
+        </section>
+
+        <hr class="mt-16 mb-10 border-gray-200" />
+
+        <section class="sm:flex sm:items-center sm:justify-between">
+          <p class="text-sm text-gray-200">
+            © Copyright 2021, All Rights Reserved by FE 38
+          </p>
+        </section>
+      </section>
+    </footer>
+
+    <script type="module" src="../modules/ArticleDetail/index.js"></script>
+  </body>
+</html>
