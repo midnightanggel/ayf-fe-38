@@ -26,26 +26,22 @@
         <img src="../assets/img/asyf-logo.png" alt="" />
       </figure>
       <nav
-        class="hidden md:flex flex-row justify-around items-center font-bold"
+        class="hidden md:flex flex-row justify-around items-center font-semibold"
       >
-        <ul class="flex flex-row gap-5 font-bold">
-          <li class="cursor-pointer text-base font-bold text-gray-900">Home</li>
-          <li class="cursor-pointer text-base font-bold text-gray-900">
-            About
-          </li>
-          <li class="cursor-pointer text-base font-bold text-gray-900">
-            Articles
-          </li>
+        <ul class="flex flex-row gap-5">
+          <li class="cursor-pointer text-base text-gray-900">Home</li>
+          <li class="cursor-pointer text-base text-gray-900">About</li>
+          <li class="cursor-pointer text-base text-gray-900">Articles</li>
         </ul>
       </nav>
       <section class="hidden md:flex flex-row gap-5">
         <button
-          class="text-gray-800 font-bold flex items-center justify-center w-auto h-auto p-2"
+          class="text-gray-800 font-semibold flex items-center justify-center w-auto h-auto p-2"
         >
           Login
         </button>
         <button
-          class="font-bold flex items-center justify-center border-2 bg-white rounded-lg p-2 text-gray-900"
+          class="font-semibold flex items-center justify-center border-2 bg-white rounded-lg p-2 text-gray-900"
         >
           Register
         </button>
@@ -406,8 +402,10 @@
       class="py-10 bg-white sm:pt-16 lg:pt-24 bg-gradient-to-bl from-green-700 via-green-400 to-green-500 text-white"
     >
       <section class="md:px-[150px] px-5">
-        <section class="flex flex-row justify-between text-gray-800">
-          <section class="w-1/2">
+        <section
+          class="flex md:flex-row flex-col gap-10 justify-between text-gray-800"
+        >
+          <section class="md:w-1/2 w-full">
             <img class="w-auto h-9" src="../assets/img/asyf-logo.png" alt="" />
             <h1 class="font-bold">Asean Youth Forum</h1>
             <p class="text-base leading-relaxed mt-7 text-justify">
@@ -416,7 +414,7 @@
             </p>
           </section>
 
-          <section class="w-/12">
+          <section class="md:w-1/2 w-full md:place-items-end flex flex-col">
             <p class="text-base font-semibold text-gray-900">Company</p>
 
             <ul class="mt-6 space-y-5">
