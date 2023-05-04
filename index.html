@@ -5,7 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AYO FE 38</title>
-    <link rel="icon" href="./assets/img/asyf-logo.png" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="shortcut icon"
+      href="./assets/img/asyf-logo.png"
+      type="image/x-icon"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,89 +18,186 @@
       rel="stylesheet"
     />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
+      href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css"
     />
     <link rel="stylesheet" href="./assets/css/index.css" />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
-      <div class="container">
-        <img
-          src="./assets/img/asyf-logo.png"
-          alt=""
-          width="60"
-          class="d-inline-block align-text-top me-3"
-        />
-        <a class="navbar-brand" href="#">Asean Youth Forum</a>
+    <header
+      class="text-gray-800 flex w-full h-[12vh] justify-between md:px-[150px] px-5 items-center bg-gradient-to-bl from-green-700 via-green-400 to-green-500"
+    >
+      <figure class="items-center justify-center w-[70px]">
+        <img src="../assets/img/asyf-logo.png" alt="" />
+      </figure>
+      <nav
+        class="hidden md:flex flex-row justify-around items-center font-semibold"
+      >
+        <ul class="flex flex-row gap-5">
+          <li class="cursor-pointer text-base text-gray-900">Home</li>
+          <li class="cursor-pointer text-base text-gray-900">About</li>
+          <li class="cursor-pointer text-base text-gray-900">Articles</li>
+        </ul>
+      </nav>
+      <section class="hidden md:flex flex-row gap-5">
         <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+          class="text-gray-800 font-semibold flex items-center justify-center w-auto h-auto p-2"
         >
-          <span class="navbar-toggler-icon"></span>
+          Login
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav mx-auto">
-            <li class="nav-item mx-2">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item mx-2">
-              <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item mx-2">
-              <a class="nav-link" href="#">Article</a>
-            </li>
-          </ul>
-          <div>
-            <button class="button-primary">Login</button>
-            <button class="button-secondary">Register</button>
-          </div>
-        </div>
-      </div>
-    </nav>
-    <div class="container">
-      <div class="row my-5">
-        <div class="col-lg-6 text-white text-center text-lg-start">
-          <h1 class="display-1 fw-bold mt-5 fs-1">
-            Uniting ASEAN's Youth for a Better Tomorrow
-          </h1>
-          <p class="my-4 lead fs-5 pb-3">
-            The ASEAN Youth Forum (AYF) is a platform for young people across
-            the ASEAN region to connect, engage, and collaborate towards a
-            brighter future. Our mission is to empower the youth of ASEAN to
-            take an active role in shaping their communities and countries, and
-            to work together towards sustainable development, peace, and
-            prosperity for all.
-          </p>
-          <button class="button-secondary" style="width: 180px">
-            let's contribute
-          </button>
-        </div>
-        <div
-          class="col-lg-6 phone-img d-none d-lg-flex justify-content-end gx-0 mt-5"
+        <button
+          class="font-semibold flex items-center justify-center border-2 bg-white rounded-lg p-2 text-gray-900"
         >
-          <div>
-            <img
-              style="width: 90vh"
-              class="rounded float-end"
-              width=""
-              src="./assets/img/hero-img.png"
-            />
+          Register
+        </button>
+      </section>
+      <section class="md:hidden flex">
+        <section id="mobile-button" class="w-[40px]">
+          <img
+            class="cursor-pointer"
+            src="../assets/img/burger-icon.png"
+            alt=""
+          />
+        </section>
+        <section
+          id="mobile-menu"
+          class="hidden flex flex-col absolute top-14 right-5 bg-gray-100 w-auto py-2 px-3 rounded-md gap-y-3"
+        >
+          <h1>Home</h1>
+          <h1>About</h1>
+          <h1>Articles</h1>
+          <h1>Login</h1>
+          <h1>Register</h1>
+        </section>
+      </section>
+    </header>
+    <main
+      class="w-full min-h-[88vh] text-gray-800 flex items-center justify-center md:px-[150px] px-5"
+    >
+      <section class="2xl:py-24 2xl:bg-white">
+        <div class="px-4 mx-auto overflow-hidden max-w-7xl sm:px-6 lg:px-8">
+          <div class="py-10 sm:py-16 lg:py-24 2xl:pl-24">
+            <div
+              class="grid items-center grid-cols-1 gap-y-12 lg:grid-cols-2 lg:gap-x-8 2xl:gap-x-20"
+            >
+              <div>
+                <h2
+                  class="text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl lg:leading-tight"
+                >
+                  Uniting ASEAN's Youth for a Better Tomorrow
+                </h2>
+                <p class="mt-4 text-base">
+                  The ASEAN Youth Forum (AYF) is a platform for young people
+                  across the ASEAN region to connect, engage, and collaborate
+                  towards a brighter future. Our mission is to empower the youth
+                  of ASEAN to take an active role in shaping their communities
+                  and countries, and to work together towards sustainable
+                  development, peace, and prosperity for all.
+                </p>
+
+                <div class="flex flex-row items-center mt-8 space-x-4 lg:mt-12">
+                  <button
+                    type="submit"
+                    class="md:w-[200px] w-[150px] bg-blue-400 h-auto md:px-6 md:py-3 p-3 rounded-xl font-bold text-white shadow-lg hover:bg-blue-500 text-xs md:text-md"
+                  >
+                    Let's Contribute
+                  </button>
+                </div>
+              </div>
+
+              <div class="relative">
+                <img
+                  class="relative w-full mx-auto"
+                  src="./assets/img/hero-img.png"
+                  alt=""
+                />
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
+      </section>
+    </main>
+    <footer
+      class="py-10 bg-white sm:pt-16 lg:pt-24 bg-gradient-to-bl from-green-700 via-green-400 to-green-500 text-white"
+    >
+      <section class="md:px-[150px] px-5">
+        <section
+          class="flex md:flex-row flex-col gap-10 justify-between text-gray-800"
+        >
+          <section class="md:w-1/2 w-full">
+            <img class="w-auto h-9" src="../assets/img/asyf-logo.png" alt="" />
+            <h1 class="font-bold">Asean Youth Forum</h1>
+            <p class="text-base leading-relaxed mt-7 text-justify">
+              Uniting ASEAN's Youth, Building a Better Future
+            </p>
+          </section>
+
+          <section class="md:w-1/2 w-full md:place-items-end flex flex-col">
+            <p class="text-base font-semibold text-gray-900">Company</p>
+
+            <ul class="mt-6 space-y-5">
+              <li>
+                <a
+                  href="#"
+                  title=""
+                  class="flex text-sm text-gray-800 transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
+                >
+                  Home
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  title=""
+                  class="flex text-sm text-gray-800 transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
+                >
+                  About
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  title=""
+                  class="flex text-sm text-gray-800 transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
+                >
+                  Article
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  title=""
+                  class="flex text-sm text-gray-800 transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
+                >
+                  Login
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  title=""
+                  class="flex text-sm text-gray-800 transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
+                >
+                  Register
+                </a>
+              </li>
+            </ul>
+          </section>
+        </section>
+
+        <hr class="mt-16 mb-10 border-gray-200" />
+
+        <section class="sm:flex sm:items-center sm:justify-between">
+          <p class="text-sm text-gray-200">
+            © Copyright 2021, All Rights Reserved by FE 38
+          </p>
+        </section>
+      </section>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
+    <script type="module" src="../modules/Articles/index.js"></script>
   </body>
 </html>
