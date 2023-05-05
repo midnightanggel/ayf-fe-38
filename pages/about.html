@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AYO FE 38</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="shortcut icon"
+      href="../assets/img/asyf-logo.png"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css"
+    />
+    <link rel="stylesheet" href="../assets/css/index.css" />
+  </head>
+  <body>
+    <header
+      class="text-gray-800 flex w-full h-[12vh] justify-between md:px-[150px] px-5 items-center bg-gradient-to-bl from-green-700 via-green-400 to-green-500"
+    >
+      <figure class="items-center justify-center w-[70px]">
+        <img src="../assets/img/asyf-logo.png" alt="" />
+      </figure>
+      <nav
+        class="hidden md:flex flex-row justify-around items-center font-semibold"
+      >
+        <ul class="flex flex-row gap-5">
+          <li class="cursor-pointer text-base text-gray-900">Home</li>
+          <li class="cursor-pointer text-base text-gray-900">About</li>
+          <li class="cursor-pointer text-base text-gray-900">Articles</li>
+        </ul>
+      </nav>
+      <section class="hidden md:flex flex-row gap-5">
+        <button
+          class="text-gray-800 font-semibold flex items-center justify-center w-auto h-auto p-2"
+        >
+          Login
+        </button>
+        <button
+          class="font-semibold flex items-center justify-center border-2 bg-white rounded-lg p-2 text-gray-900"
+        >
+          Register
+        </button>
+      </section>
+      <section class="md:hidden flex">
+        <section id="mobile-button" class="w-[40px]">
+          <img
+            class="cursor-pointer"
+            src="../assets/img/burger-icon.png"
+            alt=""
+          />
+        </section>
+        <section
+          id="mobile-menu"
+          class="hidden flex flex-col absolute top-20 right-5 bg-gray-100 w-auto py-2 px-3 rounded-md gap-y-3"
+        >
+          <h1>Home</h1>
+          <h1>About</h1>
+          <h1>Articles</h1>
+          <h1>Login</h1>
+          <h1>Register</h1>
+        </section>
+      </section>
+    </header>
+    <main class="w-full min-h-[88vh] text-gray-800 flex flex-col">
+      <section
+        class="bg-blue-400 w-full h-[70vh] flex justify-center items-center"
+      >
+        <figure class="w-full flex items-center justify-center">
+          <img class="w-[300px]" src="../assets/img/asyf-logo.png" alt="" />
+        </figure>
+      </section>
+      <section
+        class="w-full flex md:flex-row flex-col gap-5 md:px-[150px] px-5 py-[50px]"
+      >
+        <section class="md:w-1/4 w-[150px] flex justify-center h-[50px]">
+          <figure class="bg-blue-400 flex flex-row gap-4 w-full p-4 rounded">
+            <img src="../assets/img/about-icon.png" alt="" />
+            <figcaption class="text-gray-800 font-medium">About</figcaption>
+          </figure>
+        </section>
+        <section class="md:w-3/4 w-full text-justify p-3 gap-5 flex flex-col">
+          <p>
+            The ASEAN Youth Forum is a forum organized by ASEAN (Association of
+            Southeast Asian Nations) to bring together youth from all ASEAN
+            member countries to discuss and exchange information on important
+            issues affecting the ASEAN region. This forum aims to increase youth
+            participation in the ASEAN regional integration process and to
+            develop a better understanding of the needs and expectations of
+            ASEAN youth. In this forum, ASEAN youth can introduce themselves,
+            interact, collaborate, and create networks with other youth from
+            across the ASEAN region.
+          </p>
+          <h1 class="font-bold text-2xl">History</h1>
+          <p>
+            The history of the ASEAN Youth Forum began in 1975 when ASEAN
+            established. This forum aims to facilitate dialogue and exchanges
+            between ASEAN youths in an effort to improve understanding and
+            regional cooperation among member countries ASEAN. Every year, young
+            people from all over ASEAN gather to discuss important issues faced
+            by the ASEAN community, such as peace and security, economic
+            empowerment, environment, and health. This forum is also a place to
+            build networking and strengthening ties between ASEAN youth. Besides
+            In addition, the ASEAN Youth Forum is also working with the ASEAN
+            Summit and ASEAN Ministerial Meetings to convey views and
+            aspirations ASEAN youth at the policy level. This forum is a forum
+            what is important is for the youth of ASEAN to cast their voice in
+            ASEAN policy-making and enhancing their role in advancing the ASEAN
+            community.
+          </p>
+        </section>
+      </section>
+    </main>
+    <footer
+      class="py-10 bg-white sm:pt-16 lg:pt-24 bg-gradient-to-bl from-green-700 via-green-400 to-green-500 text-white"
+    >
+      <section class="md:px-[150px] px-5">
+        <section
+          class="flex md:flex-row flex-col gap-10 justify-between text-gray-800"
+        >
+          <section class="md:w-1/2 w-full">
+            <img class="w-auto h-9" src="../assets/img/asyf-logo.png" alt="" />
+            <h1 class="font-bold">Asean Youth Forum</h1>
+            <p class="text-base leading-relaxed mt-7 text-justify">
+              Uniting ASEAN's Youth, Building a Better Future
+            </p>
+          </section>
+
+          <section class="md:w-1/2 w-full md:place-items-end flex flex-col">
+            <p class="text-base font-semibold text-gray-900">Company</p>
+
+            <ul class="mt-6 space-y-5">
+              <li>
+                <a
+                  href="#"
+                  title=""
+                  class="flex text-sm text-gray-800 transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
+                >
+                  Home
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  title=""
+                  class="flex text-sm text-gray-800 transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
+                >
+                  About
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  title=""
+                  class="flex text-sm text-gray-800 transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
+                >
+                  Article
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  title=""
+                  class="flex text-sm text-gray-800 transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
+                >
+                  Login
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  title=""
+                  class="flex text-sm text-gray-800 transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
+                >
+                  Register
+                </a>
+              </li>
+            </ul>
+          </section>
+        </section>
+
+        <hr class="mt-16 mb-10 border-gray-200" />
+
+        <section class="sm:flex sm:items-center sm:justify-between">
+          <p class="text-sm text-gray-200">
+            © Copyright 2021, All Rights Reserved by FE 38
+          </p>
+        </section>
+      </section>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
+    <script type="module" src="../modules/About/index.js"></script>
+  </body>
+</html>
