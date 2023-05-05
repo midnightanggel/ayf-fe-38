@@ -34,21 +34,27 @@
         class="hidden md:flex flex-row justify-around items-center font-semibold"
       >
         <ul class="flex flex-row gap-5">
-          <li class="cursor-pointer text-base text-gray-900">Home</li>
-          <li class="cursor-pointer text-base text-gray-900">About</li>
-          <li class="cursor-pointer text-base text-gray-900">Articles</li>
+          <li class="cursor-pointer text-base text-gray-900">
+            <a href="./index.html">Home</a>
+          </li>
+          <li class="cursor-pointer text-base text-gray-900">
+            <a href="./pages/about.html"> About </a>
+          </li>
+          <li class="cursor-pointer text-base text-gray-900">
+            <a href="./pages/articles.html">Articles</a>
+          </li>
         </ul>
       </nav>
       <section class="hidden md:flex flex-row gap-5">
         <button
           class="text-gray-800 font-semibold flex items-center justify-center w-auto h-auto p-2"
         >
-          Login
+          <a href="./pages/login.html">Login</a>
         </button>
         <button
           class="font-semibold flex items-center justify-center border-2 bg-white rounded-lg p-2 text-gray-900"
         >
-          Register
+          <a href="./pages/register.html"> Register </a>
         </button>
       </section>
       <section class="md:hidden flex">
@@ -63,11 +69,13 @@
           id="mobile-menu"
           class="hidden flex flex-col absolute top-20 right-5 bg-gray-100 w-auto py-2 px-3 rounded-md gap-y-3"
         >
-          <h1>Home</h1>
-          <h1>About</h1>
-          <h1>Articles</h1>
-          <h1>Login</h1>
-          <h1>Register</h1>
+          <h1>
+            <a href="./index.html">Home</a>
+          </h1>
+          <a href="./pages/about.html"> About </a>
+          <h1><a href="./pages/articles.html">Articles</a></h1>
+          <h1><a href="./pages/login.html">Login</a></h1>
+          <h1><a href="./pages/register.html"> Register </a></h1>
         </section>
       </section>
     </header>
@@ -97,10 +105,9 @@
 
                 <div class="flex flex-row items-center mt-8 space-x-4 lg:mt-12">
                   <button
-                    type="submit"
                     class="md:w-[200px] w-[150px] bg-blue-400 h-auto md:px-6 md:py-3 p-3 rounded-xl font-bold text-white shadow-lg hover:bg-blue-500 text-xs md:text-md"
                   >
-                    Let's Contribute
+                    <a href="./pages/login.html">Let's Contribute</a>
                   </button>
                 </div>
               </div>
@@ -138,7 +145,7 @@
             <ul class="mt-6 space-y-5">
               <li>
                 <a
-                  href="#"
+                  href="./index.html"
                   title=""
                   class="flex text-sm text-gray-800 transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
                 >
@@ -148,7 +155,7 @@
 
               <li>
                 <a
-                  href="#"
+                  href="./pages/about.html"
                   title=""
                   class="flex text-sm text-gray-800 transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
                 >
@@ -158,17 +165,17 @@
 
               <li>
                 <a
-                  href="#"
+                  href="./pages/articles.html"
                   title=""
                   class="flex text-sm text-gray-800 transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
                 >
-                  Article
+                  Articles
                 </a>
               </li>
 
               <li>
                 <a
-                  href="#"
+                  href="./pages/login.html"
                   title=""
                   class="flex text-sm text-gray-800 transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
                 >
@@ -177,7 +184,7 @@
               </li>
               <li>
                 <a
-                  href="#"
+                  href="./pages/register.html"
                   title=""
                   class="flex text-sm text-gray-800 transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
                 >
