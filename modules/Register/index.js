@@ -24,17 +24,21 @@ const handleRegister = async (e) => {
   if (validate()) {
     document.getElementById("warning").classList.add("hidden");
     try {
-      await fetch("https://6450c07fa32219691150eb05.mockapi.io/ayo-api/users", {
-        method: "POST",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify({
-          fullName: fullName.value,
-          age: age.value,
-          country: country.value,
-          email: email.value,
-          password: password.value,
-        }),
-      });
+      const user = {
+        fullName: fullName.value,
+        age: age.value,
+        country: country.value,
+        email: email.value,
+        password: password.value,
+      };
+      if (localStorage.getItem("users") == null) {
+        localStorage.setItem("users", JSON.stringify([user]));
+      } else {
+        localStorage.setItem(
+          "users",
+          JSON.stringify([...JSON.parse(localStorage.getItem("users")), user])
+        );
+      }
       form.reset();
     } catch (error) {
       console.log(error);
