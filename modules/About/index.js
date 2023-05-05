@@ -10,3 +10,24 @@ mobileButton.addEventListener("click", () => {
     isClicked = true;
   }
 });
+
+const btnRegis = document.getElementById("btnRegis");
+
+const logout = () => {
+  localStorage.removeItem("user");
+  window.location.reload();
+};
+
+const isLogin = () => {
+  if (localStorage.getItem("user") != null) {
+    btnRegis.innerHTML = ` <button id="btnLogout"
+      class="font-semibold flex items-center justify-center border-2 bg-white rounded-lg p-2 text-gray-900"
+    >
+       Logout 
+    </button>`;
+    const btnLogout = document.getElementById("btnLogout");
+    btnLogout.addEventListener("click", logout);
+  }
+};
+
+isLogin();
