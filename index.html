@@ -45,7 +45,7 @@
           </li>
         </ul>
       </nav>
-      <section class="hidden md:flex flex-row gap-5">
+      <section id="btnRegis" class="hidden md:flex flex-row gap-5">
         <button
           class="text-gray-800 font-semibold flex items-center justify-center w-auto h-auto p-2"
         >
@@ -72,10 +72,12 @@
           <h1>
             <a href="./index.html">Home</a>
           </h1>
-          <a href="./pages/about.html"> About </a>
+          <h1><a href="./pages/about.html"> About </a></h1>
           <h1><a href="./pages/articles.html">Articles</a></h1>
-          <h1><a href="./pages/login.html">Login</a></h1>
-          <h1><a href="./pages/register.html"> Register </a></h1>
+          <section id="btnRegisMobile" class="flex flex-col gap-y-3">
+            <h1><a href="./pages/login.html">Login</a></h1>
+            <h1><a href="./pages/register.html"> Register </a></h1>
+          </section>
         </section>
       </section>
     </header>
@@ -170,25 +172,6 @@
                   class="flex text-sm text-gray-800 transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
                 >
                   Articles
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="./pages/login.html"
-                  title=""
-                  class="flex text-sm text-gray-800 transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
-                >
-                  Login
-                </a>
-              </li>
-              <li>
-                <a
-                  href="./pages/register.html"
-                  title=""
-                  class="flex text-sm text-gray-800 transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
-                >
-                  Register
                 </a>
               </li>
             </ul>

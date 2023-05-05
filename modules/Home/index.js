@@ -10,3 +10,29 @@ mobileButton.addEventListener("click", () => {
     isClicked = true;
   }
 });
+
+const btnRegis = document.getElementById("btnRegis");
+const btnRegisMobile = document.getElementById("btnRegisMobile");
+
+const logout = () => {
+  localStorage.removeItem("user");
+  window.location.reload();
+};
+
+const isLogin = () => {
+  if (localStorage.getItem("user") != null) {
+    btnRegis.innerHTML = ` <button id="btnLogout"
+      class="font-semibold flex items-center justify-center border-2 bg-white rounded-lg p-2 text-gray-900"
+    >
+       Logout 
+    </button>`;
+    btnRegisMobile.innerHTML = ` <button id="btnLogoutMobile"> logout</button>`;
+    const btnLogout = document.getElementById("btnLogout");
+    btnLogout.addEventListener("click", logout);
+
+    const btnLogoutMobile = document.getElementById("btnLogoutMobile");
+    btnLogoutMobile.addEventListener("click", logout);
+  }
+};
+
+isLogin();

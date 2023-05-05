@@ -1,3 +1,16 @@
+const mobileMenu = document.getElementById("mobile-menu");
+const mobileButton = document.getElementById("mobile-button");
+const articles = document.getElementById("articles");
+let isClicked = false;
+mobileButton.addEventListener("click", () => {
+  if (isClicked === true) {
+    mobileMenu.classList.remove("hidden");
+    isClicked = false;
+  } else if (isClicked === false) {
+    mobileMenu.classList.add("hidden");
+    isClicked = true;
+  }
+});
 const queryParams = new URLSearchParams(window.location.search);
 const id = queryParams.get("id") || 1;
 const article = document.getElementById("article");
@@ -25,12 +38,13 @@ const postComment = async (e) => {
           headers: { "content-type": "application/json" },
           body: JSON.stringify({
             createdAt: date,
-            fullName: "Fahmi Sugiarto",
+            fullName: JSON.parse(localStorage.getItem("user")),
             comment: commentForm.value,
             articleId: id,
           }),
         }
       );
+      console.log(JSON.parse(localStorage.getItem("user")));
       commentForm.value = "";
       getComments();
     }
@@ -63,7 +77,7 @@ const getComments = async () => {
           />
         </figure>
         <section class="w-full flex flex-col gap-[2px]">
-          <h1 class="text-sm font-medium">Fahmi Sugiarto</h1>
+          <h1 class="text-sm font-medium">${el.fullName}</h1>
           <h1 class="text-[10px] text-gray-900 font-light">
             ${el.createdAt}
           </h1>
@@ -124,3 +138,37 @@ const getArticleDetail = async () => {
 };
 
 getArticleDetail();
+
+const btnRegis = document.getElementById("btnRegis");
+const btnRegisMobile = document.getElementById("btnRegisMobile");
+const containerLogin = document.getElementById("containerLogin");
+
+const logout = () => {
+  localStorage.removeItem("user");
+  window.location.reload();
+};
+
+const isLogin = () => {
+  if (localStorage.getItem("user") != null) {
+    btnRegis.innerHTML = ` <button id="btnLogout"
+      class="font-semibold flex items-center justify-center border-2 bg-white rounded-lg p-2 text-gray-900"
+    >
+       Logout 
+    </button>`;
+    btnRegisMobile.innerHTML = ` <button id="btnLogoutMobile"> logout</button>`;
+    const btnLogout = document.getElementById("btnLogout");
+    btnLogout.addEventListener("click", logout);
+
+    const btnLogoutMobile = document.getElementById("btnLogoutMobile");
+    btnLogoutMobile.addEventListener("click", logout);
+  } else {
+    containerLogin.innerHTML = `<span class=""
+    >
+    Login to your account to participate
+    <a class="text-blue-400" href="./login.html">Login</a>
+
+  </span>`;
+  }
+};
+
+isLogin();
