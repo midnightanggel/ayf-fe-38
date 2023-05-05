@@ -1,7 +1,126 @@
-const articleDesc = document.getElementById("articleDesc");
-const description =
-  "Jakarta (ANTARA) - Gubernur Jawa Tengah Ganjar Pranowo menyatakan belajar memajukan pendidikan keagamaan di ponpes Girikusumo bersama KH Munif Zuhri atau Mbah Zuhri. Beliau punya ide yang banyak, beliau sedang mengembangkan diskusi-diskusi antara kampus dengan pesantren dan sudah berjalan beberapa seri, katanya dalam keterangan tertulis di Jakarta, Kamis. Hal itu disampaikan Ganjar usai sowan (berkunjung) ke ponpes Girikusumo. Kunjungan itu rangka syawalan setelah Idul Fitri. Pondok Pesantren (Ponpes) Girikusumo didirikan sejak tahun 1868 oleh Syeikh Muhammad Hadi bin Thohir di Kecamatan Mranggen, Kabupaten Demak, Jawa Tengah. Menurut dia, dalam diskusi itu, terdapat sejumlah kiai, akademisi hingga pakar yang sudah berpengalaman di bidangnya. Diskusi-nya bagaimana merawat bangsa ini, ucapnya. Menurut Ganjar, lingkungan pendidikan pondok pesantren memang harus mengikuti perkembangan zaman, salah satunya dengan menggandeng perguruan tinggi seperti yang dijalankan Mbah Zuhri. Hal itu kata dia, dalam rangka penanaman nilai-nilai pendidikan keagamaan dan penghormatan terhadap tokoh agama dan orang tua. Ihwal merawat bangsa dan negara, serta persatuan dan kesatuan Indonesia juga wajib dilakukan di lingkungan pesantren, katanya menegaskan. Selain itu, kata Ganjar, slogan Hubbul Wathon Minal Iman yang berarti cinta tanah air atau nasionalisme adalah sebagian dari iman, dapat diamalkan, terutama oleh para santri dan pelajar. Saya banyak mendapatkan ide-ide dari beliau (Mbah Zuhri), bagaimana merawat bangsa bersama-sama, biar para anak muda, para pelajar, kelak kemudian cintanya pada bangsa dan negara tidak pernah luntur, penghormatan pada romo, kiai, ulama, orang tua tidak luntur, hubbul wathon minal iman ada di situ, tutur Ganjar menegaskan. Diketahui Ganjar Pranowo merupakan bakal calon presiden pada Pemilu 2024, yang diusung PDI Perjuangan.";
-articleDesc.innerHTML = description
-  .split(". ")
-  .map((el) => `<p>${el}.</p>`)
-  .join("");
+const queryParams = new URLSearchParams(window.location.search);
+const id = queryParams.get("id") || 1;
+const article = document.getElementById("article");
+const comments = document.getElementById("comments");
+const commentForm = document.getElementById("commentForm");
+const buttonComment = document.getElementById("buttonComment");
+const now = new Date();
+const options = {
+  year: "numeric",
+  month: "short",
+  day: "2-digit",
+  hour: "2-digit",
+  minute: "2-digit",
+};
+const date = now.toLocaleDateString("en-US", options);
+
+const postComment = async (e) => {
+  e.preventDefault();
+  try {
+    if (commentForm.value != "") {
+      await fetch(
+        "https://6450c07fa32219691150eb05.mockapi.io/ayo-api/comments",
+        {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({
+            createdAt: date,
+            fullName: "Fahmi Sugiarto",
+            comment: commentForm.value,
+            articleId: id,
+          }),
+        }
+      );
+      commentForm.value = "";
+      getComments();
+    }
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+buttonComment.addEventListener("click", postComment);
+
+const getComments = async () => {
+  try {
+    const res = await fetch(
+      `https://6450c07fa32219691150eb05.mockapi.io/ayo-api/comments?articleId=${id}`,
+      {
+        method: "GET",
+        headers: { "content-type": "application/json" },
+      }
+    );
+    const data = await res.json();
+    if (data.length > 0) {
+      comments.innerHTML = "";
+      data.forEach((el) => {
+        comments.innerHTML += `<section  class="flex flex-row w-full gap-2">
+        <figure class="w-[40px]">
+          <img
+            src="${el.image}"
+            alt=""
+            class="rounded-full object-cover aspect-square"
+          />
+        </figure>
+        <section class="w-full flex flex-col gap-[2px]">
+          <h1 class="text-sm font-medium">Fahmi Sugiarto</h1>
+          <h1 class="text-[10px] text-gray-900 font-light">
+            ${el.createdAt}
+          </h1>
+          <h1 class="text-sm font-normal">
+            ${el.comment}
+          </h1>
+        </section>
+      </section>`;
+      });
+    }
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+getComments();
+
+const getArticleDetail = async () => {
+  try {
+    const res = await fetch(
+      `https://6450c07fa32219691150eb05.mockapi.io/ayo-api/articles?id=${id}`,
+      {
+        method: "GET",
+        headers: { "content-type": "application/json" },
+      }
+    );
+    const data = await res.json();
+    if (data.length > 0) {
+      article.innerHTML = `   <h1 class="font-bold text-4xl">${
+        data[0].title
+      }</h1>
+      <p class="text-sm">${data[0].publishedAt}</p>
+      <figure class="">
+        <img
+          class="w-full object-cover aspect-video"
+          src="${data[0].image}"
+          alt=""
+        />
+      </figure>
+      <section
+        id="articleDesc"
+        class="w-full flex flex-col gap-5 text-justify"
+      >
+        ${data[0].content
+          .split(". ")
+          .map(
+            (el) => `
+        <p>${el}.</p>
+        `
+          )
+          .join("")}
+      </section>`;
+    }
+  } catch (error) {
+    console.log(error);
+    article.innerHTML = `<p class="text-red-500">Could not fetch data</p>`;
+  }
+};
+
+getArticleDetail();
