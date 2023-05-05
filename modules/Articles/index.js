@@ -49,8 +49,6 @@ const getArticles = async () => {
         </section>
       </section>`;
       });
-    } else {
-      articles.innerHTML = `<p class="text-red-500">Data not found</p>`;
     }
   } catch (error) {
     console.log(error);
