@@ -1,16 +1,6 @@
 const mobileMenu = document.getElementById("mobile-menu");
 const mobileButton = document.getElementById("mobile-button");
 const articles = document.getElementById("articles");
-let isClicked = false;
-mobileButton.addEventListener("click", () => {
-  if (isClicked === true) {
-    mobileMenu.classList.remove("hidden");
-    isClicked = false;
-  } else if (isClicked === false) {
-    mobileMenu.classList.add("hidden");
-    isClicked = true;
-  }
-});
 const queryParams = new URLSearchParams(window.location.search);
 const id = queryParams.get("id") || 1;
 const article = document.getElementById("article");
@@ -26,6 +16,19 @@ const options = {
   minute: "2-digit",
 };
 const date = now.toLocaleDateString("en-US", options);
+const btnRegis = document.getElementById("btnRegis");
+const btnRegisMobile = document.getElementById("btnRegisMobile");
+const containerLogin = document.getElementById("containerLogin");
+let isClicked = false;
+mobileButton.addEventListener("click", () => {
+  if (isClicked === true) {
+    mobileMenu.classList.remove("hidden");
+    isClicked = false;
+  } else if (isClicked === false) {
+    mobileMenu.classList.add("hidden");
+    isClicked = true;
+  }
+});
 
 const postComment = async (e) => {
   e.preventDefault();
@@ -44,7 +47,6 @@ const postComment = async (e) => {
           }),
         }
       );
-      console.log(JSON.parse(localStorage.getItem("user")));
       commentForm.value = "";
       getComments();
     }
@@ -93,9 +95,12 @@ const getComments = async () => {
   }
 };
 
-getComments();
+const logout = () => {
+  localStorage.removeItem("user");
+  window.location.reload();
+};
 
-const getArticleDetail = async () => {
+(async () => {
   try {
     const res = await fetch(
       `https://6450c07fa32219691150eb05.mockapi.io/ayo-api/articles?id=${id}`,
@@ -135,20 +140,6 @@ const getArticleDetail = async () => {
     console.log(error);
     article.innerHTML = `<p class="text-red-500">Could not fetch data</p>`;
   }
-};
-
-getArticleDetail();
-
-const btnRegis = document.getElementById("btnRegis");
-const btnRegisMobile = document.getElementById("btnRegisMobile");
-const containerLogin = document.getElementById("containerLogin");
-
-const logout = () => {
-  localStorage.removeItem("user");
-  window.location.reload();
-};
-
-const isLogin = () => {
   if (localStorage.getItem("user") != null) {
     btnRegis.innerHTML = ` <button id="btnLogout"
       class="font-semibold flex items-center justify-center border-2 bg-white rounded-lg p-2 text-gray-900"
@@ -169,6 +160,5 @@ const isLogin = () => {
 
   </span>`;
   }
-};
-
-isLogin();
+  getComments();
+})();

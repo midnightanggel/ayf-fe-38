@@ -1,6 +1,8 @@
 const mobileMenu = document.getElementById("mobile-menu");
 const mobileButton = document.getElementById("mobile-button");
 const articles = document.getElementById("articles");
+const btnRegis = document.getElementById("btnRegis");
+const btnRegisMobile = document.getElementById("btnRegisMobile");
 let isClicked = false;
 mobileButton.addEventListener("click", () => {
   if (isClicked === true) {
@@ -12,7 +14,12 @@ mobileButton.addEventListener("click", () => {
   }
 });
 
-const getArticles = async () => {
+const logout = () => {
+  localStorage.removeItem("user");
+  window.location.reload();
+};
+
+(async () => {
   try {
     const res = await fetch(
       "https://6450c07fa32219691150eb05.mockapi.io/ayo-api/articles",
@@ -54,19 +61,7 @@ const getArticles = async () => {
     console.log(error);
     articles.innerHTML = `<p class="text-red-500">Could not fetch data</p>`;
   }
-};
 
-getArticles();
-
-const btnRegis = document.getElementById("btnRegis");
-const btnRegisMobile = document.getElementById("btnRegisMobile");
-
-const logout = () => {
-  localStorage.removeItem("user");
-  window.location.reload();
-};
-
-const isLogin = () => {
   if (localStorage.getItem("user") != null) {
     btnRegis.innerHTML = ` <button id="btnLogout"
       class="font-semibold flex items-center justify-center border-2 bg-white rounded-lg p-2 text-gray-900"
@@ -80,6 +75,4 @@ const isLogin = () => {
     const btnLogoutMobile = document.getElementById("btnLogoutMobile");
     btnLogoutMobile.addEventListener("click", logout);
   }
-};
-
-isLogin();
+})();
