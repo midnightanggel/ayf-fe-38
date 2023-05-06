@@ -12,12 +12,10 @@ mobileButton.addEventListener("click", () => {
     isClicked = true;
   }
 });
-
 const logout = () => {
   localStorage.removeItem("user");
   window.location.reload();
 };
-
 (() => {
   if (localStorage.getItem("user") != null) {
     btnRegis.innerHTML = ` <button id="btnLogout"
@@ -28,7 +26,6 @@ const logout = () => {
     btnRegisMobile.innerHTML = ` <button id="btnLogoutMobile"> logout</button>`;
     const btnLogout = document.getElementById("btnLogout");
     btnLogout.addEventListener("click", logout);
-
     const btnLogoutMobile = document.getElementById("btnLogoutMobile");
     btnLogoutMobile.addEventListener("click", logout);
   }

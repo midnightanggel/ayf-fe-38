@@ -29,7 +29,6 @@ mobileButton.addEventListener("click", () => {
     isClicked = true;
   }
 });
-
 const postComment = async (e) => {
   e.preventDefault();
   try {
@@ -157,7 +156,6 @@ const logout = () => {
     >
     Login to your account to participate
     <a class="text-blue-400" href="./login.html">Login</a>
-
   </span>`;
   }
   getComments();

@@ -28,7 +28,6 @@ const logout = () => {
     btnRegisMobile.innerHTML = ` <button id="btnLogoutMobile"> logout</button>`;
     const btnLogout = document.getElementById("btnLogout");
     btnLogout.addEventListener("click", logout);
-
     const btnLogoutMobile = document.getElementById("btnLogoutMobile");
     btnLogoutMobile.addEventListener("click", logout);
   }
